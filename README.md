@@ -1,49 +1,51 @@
-# Tratar erro do MySql
-Ao tentar fazer a conexão com o banco pela primeira vez, pode ocorrer um erro. Nesse caso, abre o gerenciador de banco de dados
-E execute a seguinte linha:
+#CRUD com MySQL, React e JavaScript
+Este projeto é um exemplo simples de aplicação CRUD (Create, Read, Update, Delete) utilizando MySQL no backend e React no frontend.
 
-ALTER USER 'seuUsuario'@'localhost' IDENTIFIED WITH mysql_native_password BY 'suaSenha';
+#Tecnologias
+Frontend: React, JavaScript
+Backend: MySQL
+#Funcionalidades
+Criação: Inserir novos registros no banco de dados.
+Leitura: Visualizar dados existentes.
+Atualização: Editar registros.
+Exclusão: Remover registros.
+#Como Executar
+Clone o repositório:
 
-FLUSH PRIVILEGES;
+bash
+Copiar código
+git clone https://github.com/seu-usuario/seu-repositorio.git
+cd seu-repositorio
+Configure o MySQL:
 
+Crie o banco de dados usando o script config/database.sql.
+Instale as dependências do backend e frontend:
 
+bash
+Copiar código
+# Backend
+cd backend
+npm install
+# Frontend
+cd ../frontend
+npm install
+Inicie o backend e o frontend:
 
-# Passos para Configuração do Projeto Node.js
-## 1. Inicializar um novo projeto Node.js
+bash
+Copiar código
+# Backend
+cd backend
+npm start
+# Frontend
+cd ../frontend
+npm start
+Acesse a aplicação:
 
-```bash
-npm init -y
-```
+Frontend disponível em http://localhost:3000.
+API backend rodando em http://localhost:5000.
+Contribuições
+Contribuições são bem-vindas! Abra uma issue ou envie um pull request.
 
-## 2. Instalar o Express
-Instala o Express, um framework para Node.js que lida com solicitações HTTP e cria rotas:
-```bash
-npm i express
-```
+Licença
+Este projeto está licenciado sob a MIT License.
 
-## 3. Instalar o MySQL2
-Instala o mysql2, um módulo do Node.js para conexão com MySQL:
-```bash
-npm i mysql2
-```
-
-## 4. Instalar o Nodemon
-Instala o nodemon, uma ferramenta que reinicia automaticamente a aplicação do Node quando detecta alterações de arquivo no diretório:
-```bash
-npm i nodemon
-```
-
-## 5. Instalar o CORS
-Instala o CORS, uma maneira de permitir que um site acesse recursos de outro site, mesmo que estejam em domínios diferentes. Isso é útil, por exemplo, quando você tem um site que precisa acessar uma API em um domínio diferente:
-```bash
-npm i cors
-```
-
-## 6. Adicionar um script 'dev' ao package.json
-Adiciona um script 'dev' ao `package.json` que inicia o servidor com o nodemon:
-```json
-"scripts": {
-  "dev": "nodemon src/server.js"
-}
-```
-```
